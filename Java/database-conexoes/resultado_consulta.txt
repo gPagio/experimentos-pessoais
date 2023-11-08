@@ -1,0 +1,24 @@
+Nº Nota: 150
+Data Venda: 01/01/2015
+Cód. Produto: 1013793
+Descrição Produto: Videira do Campo - 2 Litros - Cereja/Maca
+Preço:R$ 24,01
+---------------------------------
+Nº Nota: 150
+Data Venda: 01/01/2015
+Cód. Produto: 1041119
+Descrição Produto: Linha Citros - 700 ml - Lima/Limao
+Preço:R$ 4,90
+---------------------------------
+Nº Nota: 150
+Data Venda: 01/01/2015
+Cód. Produto: 1101035
+Descrição Produto: Linha Refrescante - 1 Litro - Morango/Limao
+Preço:R$ 9,01
+---------------------------------
+Nº Nota: 150
+Data Venda: 01/01/2015
+Cód. Produto: 229900
+Descrição Produto: Pedacos de Frutas - 350 ml - Maca
+Preço:R$ 4,21
+---------------------------------
