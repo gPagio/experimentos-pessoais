@@ -9,21 +9,18 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class HttpRequester {
 
-    final static HttpClient client = HttpClient.newHttpClient();
-
     public static HttpResponse<String> dispararRequisicaoget(URI uri) throws IOException, InterruptedException {
-    
+        HttpClient client = HttpClient.newHttpClient();
         return request(client, uri);
-    
+
     }
 
-    private static HttpResponse<String> request(HttpClient client, URI uri)
-            throws IOException, InterruptedException {
+    private static HttpResponse<String> request(HttpClient client, URI uri) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
                 .build();
-    
+
         return client.send(request, BodyHandlers.ofString());
-    
+
     }
 }

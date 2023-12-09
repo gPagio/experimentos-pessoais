@@ -1,33 +1,68 @@
 package br.com.guilhermepagio.apis.externas.model;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpResponse;
-import java.util.Scanner;
-
-import br.com.guilhermepagio.apis.externas.client.HttpRequester;
-
 public class EnderecoModel {
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
 
-    public static void listaEndereco() throws IOException, InterruptedException {
-        System.out.println(buscarEndereco());
+    public String getCep() {
+        return this.cep;
     }
 
-    private static String buscarEndereco() throws IOException, InterruptedException {
+    private String getLogradouro() {
+        return logradouro;
+    }
 
-        Scanner consoleRead = new Scanner(System.in);
-        String cep;
+    private String getComplemento() {
+        return complemento;
+    }
 
-        System.out.println("Insira o CEP para busca");
-        System.out.print("CEP -> ");
-        cep = consoleRead.next();
+    private String getBairro() {
+        return bairro;
+    }
 
-        URI uri = URI.create("https://viacep.com.br/ws/" + cep + "/json/");
-        System.out.println(uri);
+    private String getLocalidade() {
+        return localidade;
+    }
 
-        HttpResponse<String> endereco = HttpRequester.dispararRequisicaoget(uri);
-        consoleRead.close();
+    private String getUf() {
+        return uf;
+    }
 
-        return endereco.body();
+    private String getIbge() {
+        return ibge;
+    }
+
+    private String getGia() {
+        return gia;
+    }
+
+    private String getDdd() {
+        return ddd;
+    }
+
+    private String getSiafi() {
+        return siafi;
+    }
+    
+    @Override
+    public String toString() {
+        return "CEP: " + getCep() 
+             + "Logradouro:" + getLogradouro()
+             + "Complemento: " + getComplemento() 
+             + "Bairro: " + getBairro() 
+             + "Localidade: " + getLocalidade() 
+             + "UF: " + getUf() 
+             + "IBGE: " + getIbge() 
+             + "GIA: " + getGia() 
+             + "DDD: " + getDdd() 
+             + "SIAFI: " + getSiafi();
     }
 }

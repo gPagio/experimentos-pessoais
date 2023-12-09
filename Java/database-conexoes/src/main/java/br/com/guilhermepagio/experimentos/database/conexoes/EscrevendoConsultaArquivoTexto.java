@@ -33,7 +33,7 @@ public class EscrevendoConsultaArquivoTexto {
             System.out.println("Conexão bem sucedida");
             System.out.println(espacamentoLinhas);
             try {
-                printWriter = new PrintWriter("resultado_consulta.txt", "UTF-8");
+                printWriter = new PrintWriter("database-conexoes-resultado_consulta.txt", "UTF-8");
                 statement = con.createStatement();
                 resultSet = statement.executeQuery("select nf.numero, nf.data_venda, inf.codigo_do_produto, tdp.nome_do_produto, inf.preco from notas_fiscais nf inner join itens_notas_fiscais inf on INF.numero = NF.numero inner join tabela_de_produtos tdp on tdp.codigo_do_produto = inf.codigo_do_produto where nf.numero = 150;");
                 while (resultSet.next()) {
